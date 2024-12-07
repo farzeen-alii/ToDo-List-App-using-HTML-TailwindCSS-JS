@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center px-4"
+  >
+    <div class="w-full max-w-3xl bg-white p-8 rounded-xl shadow-6xl">
+      <!-- Header Section -->
+      <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
+        To-Do App 🌟
+      </h1>
+
+      <!-- Search Section -->
+      <div class="relative mb-6">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="🔍 Search tasks..."
+          class="w-full px-5 py-3 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-300 shadow-md bg-gray-100"
+        />
+      </div>
+
+      <!-- Input Section -->
+      <div
+        class="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 mb-6 shadow-md rounded-lg"
+      >
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="✍️ Add a new task..."
+          class="w-full sm:flex-1 px-5 py-3 text-lg border rounded-lg sm:rounded-l-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-blue-400 border-gray-300 bg-gray-100"
+        />
+        <button
+          id="addTaskButton"
+          class="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:from-blue-600 hover:to-blue-700 transition"
+        >
+          Add
+        </button>
+      </div>
+
+      <!-- Task List Section -->
+      <div
+        class="max-h-80 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full"
+      >
+        <ul id="taskList" class="space-y-4"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
